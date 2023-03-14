@@ -22,6 +22,11 @@ def send():
         window.close()
 
 
+def on_closing():
+    my_msg.set("#quit")
+    send()
+
+
 window = Tk()
 window.title("Chat Room Application")
 window.configure(bg="green")
