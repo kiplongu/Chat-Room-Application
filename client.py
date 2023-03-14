@@ -52,11 +52,11 @@ entry_field = Entry(window, textvariable=my_msg, fg="red", width=50)
 entry_field.pack()
 
 send_Button = Button(window, text="Send", font="Aerial",
-                     fg="white", command=send)
+                     fg="blue", command=send)
 send_Button.pack()
 
 quit_Button = Button(window, text="Quit", font="Aerial",
-                     fg="white", command=on_closing)
+                     fg="blue", command=on_closing)
 quit_Button.pack()
 
 Host = "127.0.0.1"
