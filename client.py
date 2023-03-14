@@ -13,6 +13,15 @@ def receive():
             print("There is Error receiving the message")
 
 
+def send():
+    msg = my_msg.get()
+    my_msg.set("")
+    s.send(bytes(msg, "utf8"))
+    if msg == "#quit":
+        s.close()
+        window.close()
+
+
 window = Tk()
 window.title("Chat Room Application")
 window.configure(bg="green")
