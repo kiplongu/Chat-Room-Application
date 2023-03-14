@@ -3,6 +3,16 @@ import socket
 from tkinter import *
 from threading import Thread
 
+
+def receive():
+    while True:
+        try:
+            msg = s.recv(1024).decode("utf8")
+            msg_list.insert(tkinter.END, msg)
+        except:
+            print("There is Error receiving the message")
+
+
 window = Tk()
 window.title("Chat Room Application")
 window.configure(bg="green")
